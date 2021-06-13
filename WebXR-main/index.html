@@ -69,10 +69,12 @@
 						// mesh.scale.y = Math.random() * 2 + 1;
 						// scene.add( mesh );
 						const loader = new GLTFLoader();
-						loader.load('./3D_Model/Jenga.glb', function ( gltf ){
-							model = gltf.scene.childrem[0];
-							model.position.setFromMatrixPosition( reticle.matrix );
+						loader.load('./3D_Model/Chair.gltf', function ( gltf ){
+							
+							
+							gltf.scene.position.setFromMatrixPosition( reticle.matrix );
 							scene.add(gltf.scene);
+							console.log("Model Loaded");
 						});
 
 
